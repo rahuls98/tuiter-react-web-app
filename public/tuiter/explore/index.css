@@ -1,0 +1,180 @@
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.wd-grey {
+    color: rgb(90, 90, 90);
+}
+
+.wd-explore-css-container {
+    width: 100%;
+}
+
+.wd-search-and-settings {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.wd-search-bar {
+    width: 100%;
+    background: rgb(240, 240, 240);
+    border-radius: 500px;
+    padding: 15px 20px 15px 20px;
+    display: flex;
+    color: grey;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.wd-search-bar input {
+    width: 100%;
+    margin-left: 15px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+}
+
+.wd-search-bar input:focus {
+    outline-width: 0;
+}
+
+.wd-explore-css-container .wd-gear {
+    color: gray;
+    margin-right: 20px;
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.wd-tab-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    border-bottom: gainsboro solid 1px;
+}
+
+.wd-tab {
+    list-style-type: none;
+    margin: 0;
+}
+
+.wd-selected {
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: rgb(0, 94, 255) solid 3px;
+}
+
+.wd-banner {
+    height: 500px;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("crown.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    color: white;
+    position: relative;
+    margin: 0;
+}
+
+.wd-banner-data {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.wd-banner-live {
+    background: rgb(243, 26, 62);
+    padding: 5px 8px 5px 8px;
+    border-radius: 8px;
+}
+
+.wd-banner-title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.wd-banner-title span {
+    margin: 0;
+}
+
+.wd-tuits ul {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.wd-tuit {
+    width: 100%;
+    display: flex;
+    margin: 25px 0 25px 0;
+}
+
+.wd-tuit-content {
+    width: 90%;
+}
+
+.wd-tuit-content span {
+    color: grey;
+}
+
+.wd-tuit-content p {
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+}
+
+.wd-tuit-menu {
+    width: 10%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.explore-container .fa-ellipsis {
+    color: gray;
+}
+
+.explore-container {
+    margin: 10px;
+}
+
+.explore-container p {
+    margin: 0;
+}
+
+.explore-container .list-group a {
+    display: flex;
+    align-items: center;
+}
+
+.explore-container .fa-ellipsis {
+    color: black;
+}
+
+.explore-container .input-group {
+    border: gainsboro solid 1px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.explore-container .input-group-text {
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+
+.explore-container .input-group input {
+    border: none;
+}
+
+.explore-container .fa-gear {
+    font-size: 18px;
+}
