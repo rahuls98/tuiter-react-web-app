@@ -1,0 +1,95 @@
+.wd-bookmarks-css-container {
+    margin: 10px;
+}
+
+.wd-page-header {
+    display: flex;
+    align-items: center;
+}
+
+.wd-page-header .fa-arrow-left {
+    width: 8%;
+}
+
+.wd-page-header h2 {
+    width: 89%;
+}
+
+.wd-page-header .fa-ellipsis {
+    width: 3%;
+}
+
+.wd-tuit {
+    display: flex;
+    border: rgb(240, 240, 240) solid 1px;
+    padding: 15px;
+}
+
+.wd-tuit .wd-tuit-logo {
+    width: 5%;
+}
+
+.wd-tuit .wd-tuit-content {
+    width: 95%;
+    margin-left: 10px;
+}
+
+.wd-tuit-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-tuit-header .fa-ellipsis {
+    margin-right: 10px;
+}
+
+.wd-tuit-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.wd-tuit-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.wd-tuit-username,
+.wd-tuit-dot,
+.wd-tuit-date {
+    margin-left: 5px;
+    color: gray;
+}
+
+.wd-tuit-post {
+    border-radius: 10px;
+    border: gainsboro solid 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.wd-post-content {
+    padding: 10px;
+}
+
+.wd-post-title {
+    font-weight: 500;
+    margin: 5px 0 5px 0;
+}
+
+.wd-post-website,
+.wd-post-para {
+    margin: 0;
+    color: gray;
+}
+
+.wd-tuit-buttons {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+
+.wd-tuit-button-selected {
+    color: rgb(255, 0, 93);
+}
