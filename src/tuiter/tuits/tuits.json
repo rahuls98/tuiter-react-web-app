@@ -5,7 +5,7 @@
         "userName": "SpaceX",
         "title": "Tesla CyberTruck lands on Mars and picks up the Curiosity rover on its 6' bed",
         "time": "2h",
-        "image": "tesla-motors-logo-svg-vector.svg",
+        "image": "spacex-filled.jpeg",
         "liked": true,
         "replies": 123,
         "retuits": 432,
@@ -16,16 +16,16 @@
     {
         "_id": 345,
         "topic": "Energy",
-        "userName": "Virgin",
+        "userName": "Tesla",
         "title": "Tesla FSD finally makes driving obsolete. After years of delay, Tesla Full Self Driving can drive you to work while you work, play, or sleep",
         "time": "4d",
-        "image": "virgin-logo.png",
+        "image": "tesla-filled.png",
         "liked": true,
         "replies": 23,
         "retuits": 2,
         "likes": 678,
-        "handle": "@virgin.usa",
-        "tuit": "🚀 Breaking News! We're thrilled to unveil our groundbreaking rocket, VivaNova! 🌟 Experience the future of space travel with VivaNova's advanced capabilities and unparalleled comfort. ✨ Get ready to embark on extraordinary journeys beyond our atmosphere! #VirginGalactic #VivaNova #SpaceTravel"
+        "handle": "@tesla",
+        "tuit": "🚀 Breaking News! Tesla To Add Official Support for Third-Party Services and Apps. Tesla FSD finally makes driving obsolete. After years of delay, Tesla Full Self Driving can drive you to work while you work, play, or sleep"
     },
     {
         "_id": 234,
@@ -33,7 +33,7 @@
         "userName": "SpaceX",
         "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
         "time": "2h",
-        "image": "spaceX.jpg",
+        "image": "spacex-filled.jpeg",
         "liked": true,
         "replies": 2367,
         "retuits": 45,
