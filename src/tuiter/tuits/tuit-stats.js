@@ -5,31 +5,44 @@ import {
     FaHeart,
     FaRegShareSquare,
 } from "react-icons/fa";
+import { updateTuitThunk } from "../services/tuits-thunks";
+import { useDispatch } from "react-redux";
 
-const TuitStats = ({ liked = false, replies = 0, retuits = 0, likes = 0 }) => {
+const TuitStats = ({ tuit }) => {
+    const dispatch = useDispatch();
     return (
         <div className="row">
             <div className="col-3">
                 <span className="me-3">
                     <FaRegComment />
                 </span>
-                {replies}
+                {tuit.replies}
             </div>
             <div className="col-3">
                 <span className="me-3">
                     <FaRetweet />
                 </span>
-                {retuits}
+                {tuit.retuits}
             </div>
             <div className="col-3">
                 <span className="me-3">
-                    {liked ? (
+                    {tuit.liked ? (
                         <FaHeart className="text-danger" />
                     ) : (
-                        <FaRegHeart />
+                        <FaRegHeart
+                            onClick={() =>
+                                dispatch(
+                                    updateTuitThunk({
+                                        ...tuit,
+                                        liked: true,
+                                        likes: tuit.likes + 1,
+                                    })
+                                )
+                            }
+                        />
                     )}
                 </span>
-                {likes}
+                {tuit.likes}
             </div>
             <div className="col-3">
                 <FaRegShareSquare />
