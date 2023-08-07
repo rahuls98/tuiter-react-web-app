@@ -24,6 +24,8 @@ const WhatsHappening = () => {
         replies: 0,
         retuits: 0,
         likes: 0,
+        disliked: false,
+        dislikes: 0,
     };
 
     const tuitClickHandler = () => {
