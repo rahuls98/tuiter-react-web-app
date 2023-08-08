@@ -5,12 +5,18 @@ const USERS_URL = `${API_BASE}/users`;
 const api = axios.create({ withCredentials: true });
 
 export const login = async ({ username, password }) => {
-    const response = await api.post(`${USERS_URL}/login`, {
-        username,
-        password,
-    });
-    const user = response.data;
-    return user;
+    try {
+        const response = await api.post(`${USERS_URL}/login`, {
+            username,
+            password,
+        });
+        const user = response.data;
+        return user;
+    } catch (e) {
+        if (e.response.status === "404") {
+            return undefined;
+        }
+    }
 };
 
 export const logout = async () => {
@@ -26,6 +32,12 @@ export const updateUser = async (user) => {
     return response.data;
 };
 export const register = async (data) => {
-    const response = await api.post(`${USERS_URL}/register`, data);
-    return response.data;
+    try {
+        const response = await api.post(`${USERS_URL}/register`, data);
+        return response.data;
+    } catch (e) {
+        if (e.response.status === "409") {
+            return undefined;
+        }
+    }
 };

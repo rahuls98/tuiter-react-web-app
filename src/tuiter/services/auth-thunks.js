@@ -26,7 +26,11 @@ export const updateUserThunk = createAsyncThunk(
     }
 );
 
-export const registerThunk = createAsyncThunk("user/register", async (data) => {
-    const user = await authService.register(data);
-    return user;
-});
+export const registerThunk = createAsyncThunk(
+    "user/register",
+    async (data, { rejectWithValue }) => {
+        const user = await authService.register(data);
+        if (user) return user;
+        else return rejectWithValue(undefined);
+    }
+);

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 const NavigationSidebar = () => {
     const { currentUser } = useSelector((state) => state.user);
     const { pathname } = useLocation();
     const [ignore, tuiter, active] = pathname.split("/");
+    const navigate = useNavigate();
     const links = [
         "home",
         "explore",
@@ -16,18 +18,17 @@ const NavigationSidebar = () => {
         // "profile",
         "more",
     ];
+
+    useEffect(() => {
+        if (!active && !currentUser) {
+            navigate("/tuiter/login");
+        } else if (!active && currentUser) {
+            navigate("/tuiter/profile");
+        }
+    }, []);
+
     return (
         <div className="list-group">
-            {links.map((link) => (
-                <Link
-                    to={`/tuiter/${link}`}
-                    className={`list-group-item text-capitalize ${
-                        active === link ? "active" : ""
-                    }`}
-                >
-                    {link}
-                </Link>
-            ))}
             {!currentUser && (
                 <Link
                     className={`list-group-item text-capitalize ${
@@ -60,6 +61,16 @@ const NavigationSidebar = () => {
                     Profile{" "}
                 </Link>
             )}
+            {links.map((link) => (
+                <Link
+                    to={`/tuiter/${link}`}
+                    className={`list-group-item text-capitalize ${
+                        active === link ? "active" : ""
+                    }`}
+                >
+                    {link}
+                </Link>
+            ))}
         </div>
     );
 };

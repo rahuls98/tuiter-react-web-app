@@ -14,7 +14,10 @@ function ProfileScreen() {
     const navigate = useNavigate();
 
     const save = async () => {
-        await dispatch(updateUserThunk(profile));
+        let response = await dispatch(updateUserThunk(profile));
+        if (response) {
+            alert("Saved!");
+        }
     };
 
     const handleLogout = () => {

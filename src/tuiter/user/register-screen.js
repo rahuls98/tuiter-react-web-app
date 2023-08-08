@@ -19,8 +19,12 @@ const RegisterScreen = () => {
                 firstName: firstName,
                 lastName: lastName,
             };
-            await dispatch(registerThunk(data));
-            navigate("/tuiter/profile");
+            let response = await dispatch(registerThunk(data));
+            if (response.payload) {
+                navigate("/tuiter/profile");
+            } else {
+                alert("This username has been taken, please try another!");
+            }
         } catch (e) {
             alert(e);
         }

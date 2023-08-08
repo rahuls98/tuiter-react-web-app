@@ -43,18 +43,14 @@ function Tuiter() {
                                 path="/bookmarks"
                                 element={<BookmarksScreen />}
                             />
-                            {/* <Route
+                            <Route
                                 path="/profile"
                                 element={<ProfileScreen />}
-                            /> */}
+                            />
                             <Route path="/login" element={<LoginScreen />} />
                             <Route
                                 path="/register"
                                 element={<RegisterScreen />}
-                            />
-                            <Route
-                                path="/profile"
-                                element={<ProfileScreen />}
                             />
                         </Routes>
                     </div>

@@ -9,8 +9,14 @@ function LoginScreen() {
     const dispatch = useDispatch();
     const handleLogin = async () => {
         try {
-            await dispatch(loginThunk({ username, password }));
-            navigate("/tuiter/profile");
+            let response = await dispatch(loginThunk({ username, password }));
+            if (response.payload) {
+                navigate("/tuiter/profile");
+            } else {
+                alert(
+                    "Invalid credentials, please try again. If you don't have an account, please register yourself."
+                );
+            }
         } catch (e) {
             alert(e);
         }
