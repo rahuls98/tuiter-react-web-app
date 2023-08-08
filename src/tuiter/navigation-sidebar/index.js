@@ -52,7 +52,7 @@ const NavigationSidebar = () => {
             {currentUser && (
                 <Link
                     className={`list-group-item text-capitalize ${
-                        active === "login" ? "profile" : ""
+                        active === "profile" ? "active" : ""
                     }`}
                     to="/tuiter/profile"
                 >
