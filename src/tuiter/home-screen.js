@@ -7,6 +7,7 @@ const HomeScreen = () => {
             <h1>Home</h1>
             <WhatsHappening />
             <TuitsList />
+            <br />
         </>
     );
 };

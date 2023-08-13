@@ -5,17 +5,36 @@ import { BsEmojiSmile } from "react-icons/bs";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 // import { addTuit } from "./reducers/home-tuits-reducer";
 import { useDispatch } from "react-redux";
-import { createTuit } from "./reducers/tuits-reducer";
+import { createTuitThunk } from "./services/tuits-thunks";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState("");
     const dispatch = useDispatch();
 
+    const currentUser = {
+        username: "NASA",
+        handle: "@nasa",
+        image: "nasa.png",
+    };
+
+    const templateTuit = {
+        topic: "Space",
+        time: "2h",
+        liked: false,
+        replies: 0,
+        retuits: 0,
+        likes: 0,
+        disliked: false,
+        dislikes: 0,
+    };
+
     const tuitClickHandler = () => {
         const newTuit = {
             tuit: whatsHappening,
+            ...currentUser,
+            ...templateTuit,
         };
-        dispatch(createTuit(newTuit));
+        dispatch(createTuitThunk(newTuit));
         setWhatsHappening("");
     };
     return (

@@ -1,6 +1,6 @@
 import TuitStats from "./tuit-stats";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../reducers/tuits-reducer";
+import { deleteTuitThunk } from "../services/tuits-thunks";
 import { GrClose } from "react-icons/gr";
 
 const TuitItem = ({
@@ -21,7 +21,7 @@ const TuitItem = ({
 }) => {
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     };
 
     return (
@@ -44,7 +44,7 @@ const TuitItem = ({
                     </i>
                     <div className="d-flex align-items-center">
                         <span className="d-inline-block fw-bold mx-1">
-                            {tuit.userName}
+                            {tuit.username}
                         </span>
                         <span className="d-inline-block mx-1">
                             <svg
@@ -66,12 +66,7 @@ const TuitItem = ({
                         </span>
                     </div>
                     <p>{tuit.tuit}</p>
-                    <TuitStats
-                        liked={tuit.liked}
-                        replies={tuit.replies}
-                        retuits={tuit.retuits}
-                        likes={tuit.likes}
-                    />
+                    <TuitStats tuit={tuit} />
                 </div>
             </div>
         </li>
