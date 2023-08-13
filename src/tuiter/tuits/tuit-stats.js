@@ -17,13 +17,13 @@ const TuitStats = ({ tuit }) => {
                 <span className="me-3">
                     <FaRegComment />
                 </span>
-                {tuit.replies}
+                {tuit.replies || 0}
             </div>
             <div className="col-2">
                 <span className="me-3">
                     <FaRetweet />
                 </span>
-                {tuit.retuits}
+                {tuit.retuits || 0}
             </div>
             <div className="col-2">
                 <span className="me-3">
@@ -54,7 +54,7 @@ const TuitStats = ({ tuit }) => {
                         />
                     )}
                 </span>
-                {tuit.likes}
+                {tuit.likes || 0}
             </div>
             <div className="col-2">
                 <span className="me-3">
@@ -84,7 +84,7 @@ const TuitStats = ({ tuit }) => {
                         />
                     )}
                 </span>
-                {tuit.dislikes}
+                {tuit.dislikes || 0}
             </div>
             <div className="col-2">
                 <FaRegShareSquare />
