@@ -13,7 +13,7 @@ const TuitsList = () => {
     return (
         <ul className="list-group">
             {loading && <li className="list-group-item">Loading...</li>}
-            {tuits.length === 0 ? (
+            {!loading && tuits.length === 0 ? (
                 <li className="list-group-item">No tuits!</li>
             ) : (
                 tuits.map((tuit) => <TuitItem tuit={tuit} />)
